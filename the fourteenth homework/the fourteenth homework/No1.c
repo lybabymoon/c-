@@ -19,8 +19,13 @@
 //	reserve(p + n, p + len - 1);         //将剩余的内容逆序
 //	reserve(p, p + len - 1);             //对整个字符串逆序
 //}
+<<<<<<< HEAD
 //int main(){
 //	char arr[] = "AABCD";
+=======
+//int main1(){
+//	char arr[] = "ABCD";
+>>>>>>> 7f4ec8ca41f0edfeb2294da65b5afca44cd6e3cf
 //	int len = strlen(arr);
 //	int k = 0;
 //	printf("请输入旋转字符的个数:\n");
