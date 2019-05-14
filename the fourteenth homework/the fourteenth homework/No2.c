@@ -18,13 +18,20 @@ void reserve(char *left, char *right){            //逆序输出函数
 		right--;
 	}
 }
+<<<<<<< HEAD
 void left_remove(char * p, int k, int len){
 	reserve(p, p + k - 1);               //将要旋转的内容逆序
 	reserve(p + k, p + len - 1);         //将剩余的内容逆序
+=======
+void left_remove(char * p, int n, int len){
+	reserve(p, p + n - 1);               //将要旋转的内容逆序
+	reserve(p + n, p + len - 1);         //将剩余的内容逆序
+>>>>>>> 7f4ec8ca41f0edfeb2294da65b5afca44cd6e3cf
 	reserve(p, p + len - 1);             //对整个4字符串逆序
 }
 
 int main(){
+<<<<<<< HEAD
 	char arr1[] = "abcd";
 	char arr2[] = "ABCD";
 	int len = strlen(arr1);
@@ -49,6 +56,17 @@ int main(){
 	if (count == 3){
 		printf("0 \n");
 	}
+=======
+	char arr1[] = "AABCD";
+	char arr2[] = "BCDAA";
+	int len = strlen(arr1);
+	int k = 0;
+	for (int k = 0; k < len - 1; k++){
+		left_remove(arr1, k, len);
+		printf("%s\n", arr1);
+	}
+	
+>>>>>>> 7f4ec8ca41f0edfeb2294da65b5afca44cd6e3cf
 	system("pause");
 	return 0;
 }
