@@ -21,20 +21,22 @@ void left_remove(char * p, int n, int len){
 }
 
 int main(){
-	char arr[] = "ABCD";
+	char arr[] = "ABCDE";
 	int len = strlen(arr);
 	int k = 0;
+	
 	printf("请输入旋转字符的个数:\n");
 	scanf("%d", &k);
-	while (k<1 || k>len - 1){
+	int pos = len - k % len;
+	/*while (k<1 || k>len - 1){
 		if (k == len){
 			printf("%s", arr);
 		}
 		else{
 			printf("输入错误,请重新输入!\n");
 		}
-	}
-	left_remove(arr, k, len);
+	}*/
+	left_remove(arr, k, pos);
 	printf("%s\n", arr);
 	system("pause");
 	return 0;
