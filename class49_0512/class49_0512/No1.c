@@ -154,14 +154,25 @@ int main11(){
 	system("pause");
 	return 0;
 }
-int main10(){
-	int a[3][4];
-	int(*p)[4];
-	int *q[3];
+int main16(){
+	int a[3][4] = { 1,  2,  3,  4,
+		            5,  6,  7,  8, 
+					9, 10, 11, 12 };
+	int(*p)[4];           //数组指针
+	int *q[3];            //指针数组
 	int i;
 	p = a;
-	for (i = 0; i < 3; i++)
-		q[i] = a[i];
+	for (i = 0; i < 4; i++)
+	{
+		*p[i] = a[i];
+		
+	}
+	for (i = 0; i < 3; i++){
+		printf("%d\n", (*p[i]));
+	}
+
+	system("pause");
+	return 0;
 }
 int sub(int a, int b){
 	return a - b;
@@ -200,7 +211,7 @@ int(*fn(int n))(int, int){
 	printf("fn:n=%d\n", n);
 	return add;
 }
-void main(){
+void main14(){
 	int value = fn(100)(3, 9);
 	printf("%d\n", value);
 	//int (*p)(int,int);
@@ -209,3 +220,43 @@ void main(){
 	system("pause");
 }
 //signal  不知道是什么动动  老师说下节课给看一下   理解了指针就没问题了
+
+
+//数组指针的使用
+
+	void  print_arr1(int arr[3][5], int row, int col){
+		int i = 0;
+		int j = 0;
+		for (i = 0; i<row; i++)
+		{
+			for (j = 0; j<col; j++)
+			{
+				printf("%d ", arr[i][j]);
+			}
+			printf("\n");
+		}
+	}
+	void print_arr2(int(*arr)[5], int row, int col)
+	{
+		int i = 0;
+		int j = 0;
+		for (i = 0; i<row; i++)
+		{
+			for (j = 0; j<col; j++)
+			{
+				printf("%d ", arr[i][j]);
+			}
+			printf("\n");
+		}
+	}
+	int main() {
+		int arr[3][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		print_arr1(arr, 3, 5);    
+		//数组名arr，表示首元素的地址    
+		//但是二维数组的首元素是二维数组的第一行    
+		//所以这里传递的arr，其实相当于第一行的地址，是一维数组的地址    
+		//可以数组指针来接收     
+		print_arr2(arr, 3, 5);
+		system("pause");
+		return 0;
+	}
