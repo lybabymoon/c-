@@ -23,7 +23,7 @@ void * my_memmove(void * dst,const void * src,size_t count){
 	}
 	return(ret);
 }
-int main(){
+int main7(){
 	char a[20] = "12345678";
 	char b[20] = "qwert";
 	/*memmove(a + 2,a , 5);
