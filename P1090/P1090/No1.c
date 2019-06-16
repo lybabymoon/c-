@@ -5,12 +5,8 @@
 int main(){    //只卖同一种
 	int sum = 0;
 	int mix = 0;
-	int price1 = 0;
-	int price2 = 0;
-	int price3 = 0;
-	int type1 = 0;
-	int type2 = 0;
-	int type3 = 0;
+	int price1 = 0, price2 = 0, price3 = 0;
+	int type1 = 0, type2 = 0, type3 = 0;
 	int a = 0, b = 0, c = 0;
 	int type[3] = { 0 };
 	int price[3] = { 0 };
