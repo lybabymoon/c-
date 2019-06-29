@@ -5,14 +5,14 @@
 int main(){    //只卖同一种
 	int sum = 0;
 	int mix = 0;
-	int price1 = 0, price2 = 0, price3 = 0;
+	int price1 = 0, price2 = 0, price3 = 0;   
 	int type1 = 0, type2 = 0, type3 = 0;
 	int a = 0, b = 0, c = 0;
 	int type[3] = { 0 };
 	int price[3] = { 0 };
 	scanf("%d", &sum);
 	for (int i = 0; i < 3; i++){
-		scanf("%d %d", &type[i], &price[i]);
+		scanf("%d%d", &type[i], &price[i]);
 	}
 	type1 = sum / type[0];
 	a = sum % type[1] == 0 ? type1 : type1 + 1;
