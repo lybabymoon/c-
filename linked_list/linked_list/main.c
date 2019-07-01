@@ -11,8 +11,11 @@ void listtest(){
 
 	SListPopFront(&test);
 	SListPrint(&test);
+	SListReverse(&test);
+	SListPrint(&test);
 }
 int main(){
+
 	listtest();
 	system("pause");
 	return 0;
