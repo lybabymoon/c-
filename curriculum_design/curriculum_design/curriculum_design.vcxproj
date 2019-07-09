@@ -64,11 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="design.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="design.c" />
-    <ClCompile Include="mian.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

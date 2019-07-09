@@ -15,14 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="design.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="mian.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="design.c">
       <Filter>源文件</Filter>
     </ClCompile>
