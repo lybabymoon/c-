@@ -13,6 +13,11 @@ void quicksort(int left, int right){
 	while (i != j){              //如果left 和 right 不相交则开始循环j--。i++
 		while (a[j] >= tmp && i < j)    //找到小于基准的数字
 			j--;
+		if (i < j){                    //交换大于基准的数字与小于基准的数字
+			t = a[i];
+			a[i] = a[j];
+			a[j] = t;
+		}
 		while (a[i] <= tmp && i < j)    //找到大于基准的数字
 			i++;
 		if (i < j){                    //交换大于基准的数字与小于基准的数字
