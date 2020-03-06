@@ -50,10 +50,10 @@ void heapSort(vector<int> &a, int length)    //∂—≈≈–Ú
 		maxHeapify(a, 0, 0, i - 1);
 	}
 }
-int main2()
+int main()
 {
 	vector<int> a = { 4, 7, 6, 8, 5, 3, 2, 1 };
-	heapSort(a, a.size());
+	buildMaxHeap(a, a.size());
 
 	for (auto &i : a)
 	{

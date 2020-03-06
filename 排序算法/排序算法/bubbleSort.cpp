@@ -16,7 +16,7 @@ void bubbleSort(vector<int> & nums)
 		}
 	}
 }
-int main()
+int main3()
 {
 	vector<int> a = { 4, 7, 6, 8, 5, 3, 2, 1 };
 	bubbleSort(a);

@@ -2,7 +2,7 @@
 #include <stack>
 #include <queue>
 
-namespace wf{
+namespace ly{
 
 	template < class T >
 	class TreeNode

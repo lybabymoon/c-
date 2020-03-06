@@ -11,7 +11,7 @@ int main()
 	//wf::Tree<char> tr("ABD##E##CFH##I##G##", '#');
 
 	int arr[] = { 5, 8, 4, 12, -1, -1, 18, 17, -1, -1, 21, -1, -1, 9, -1, 7, -1, -1, 7, 6, -1, 5, 11, -1, -1, -1, 3, 4, -1, -1, 1, 14, -1, -1, -1 };
-	wf::Tree<int> tr(arr, -1);
+	ly::Tree<int> tr(arr, -1);
 	/*
 	tr.pre_order();
 	cout << endl;
