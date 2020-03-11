@@ -4,21 +4,21 @@ using namespace std;
 typedef int HPDataType;
 
 class Heap{
-	vector<HPDataType> m_nums;
+	//vector<HPDataType> m_nums;
 	
 public:
-	Heap()
-		:m_nums(m_nums)
-	{
+	//Heap()
+	//	:m_nums(m_nums)
+	//{
 
-	}
+	//}
 
 void Heapify(vector<HPDataType>& m_nums, int i, int low, int high)
 {
 	int l = 2 * i + 1;
 	int r = 2 * i + 2;
 	int _max;     //保存最大值下标    
-	if (l <= high && m_nums[l] > m_nums[r])
+	if (l <= high && m_nums[l] > m_nums[i])
 	{
 		_max = l;
 	}
@@ -40,7 +40,7 @@ void Heapify(vector<HPDataType>& m_nums, int i, int low, int high)
 }
 	void HeapInit(vector<HPDataType>& m_nums)    //初始化为大堆
 	{
-		int len = m_nums.size() - 1;
+		int len = m_nums.size();
 		for (int i = len / 2 - 1; i >= 0; i--)
 		{
 			Heapify(m_nums, i, 0, len - 1);
