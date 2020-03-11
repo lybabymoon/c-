@@ -53,7 +53,7 @@ void heapSort(vector<int> &a, int length)    //∂—≈≈–Ú
 int main()
 {
 	vector<int> a = { 4, 7, 6, 8, 5, 3, 2, 1 };
-	buildMaxHeap(a, a.size());
+	heapSort(a, a.size());
 
 	for (auto &i : a)
 	{
