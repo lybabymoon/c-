@@ -177,10 +177,37 @@ public:
 	}
 
 	//二叉树的最近公共节点
-	TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q)
+	TreeNode* lowestCommonAncestor2(TreeNode* root, TreeNode* p, TreeNode* q)
 	{
 		if (!root || (!p && !q)) return nullptr;
 
 		return root;
+	}
+
+	//897递增顺序查找树
+	TreeNode* increasingBST(TreeNode* root) {
+		if (root == nullptr) return root;
+		TreeNode* res = new TreeNode(0);
+		TreeNode* pre = res;
+		TreeNode* cur = root;
+		stack<TreeNode*> st;
+		while (cur || !st.empty())
+		{
+			for (;cur;cur = cur->left)
+			{
+				st.push(cur);
+			}
+			cur = st.top();
+			if (cur)
+			{
+				pre->right = cur;
+				pre = pre->right;
+			}
+				
+			
+			st.pop();
+			cur = cur->right;
+		}
+		return res->right;
 	}
 };

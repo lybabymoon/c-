@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClInclude Include="binaryTree.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="源.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{E57DEC1B-A98B-4896-B737-2A3DFAA97D7C}</ProjectGuid>
