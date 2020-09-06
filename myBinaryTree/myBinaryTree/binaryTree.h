@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <stack>
+#include <string>
 using namespace std;
 struct TreeNode
 {
@@ -209,5 +210,30 @@ public:
 			cur = cur->right;
 		}
 		return res->right;
+	}
+
+	vector<string> ans;
+	vector<string> binaryTreePaths(TreeNode* root)
+	{
+		if (root == nullptr) return {};
+		dfs(root, "");
+		return ans;
+	}
+	void dfs(TreeNode* root, string path)
+	{
+		if (root == nullptr)
+		{
+			return;
+		}
+		path += to_string(root->val);
+
+		if (root->left == nullptr && root->right == nullptr)
+		{
+			ans.push_back(path);
+			return;
+		}
+
+		dfs(root->left, path + "->");
+		dfs(root->right, path + "->");
 	}
 };
